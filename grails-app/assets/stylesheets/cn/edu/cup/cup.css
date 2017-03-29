@@ -1,0 +1,125 @@
+/*
+有确切ID的样式
+*/
+
+.homeBtn {
+    display: inline-block;
+    padding: 6px;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 0.6;
+    text-align: center;
+    text-indent: 25px;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #153675;
+    border-radius: 6px;
+    background-position: 0.7em center;
+    background-repeat: no-repeat;
+    background-image: url("../../../../images/skin/house.png");
+}
+
+/*页眉右侧的显示信息*/
+.navbar-nav>li>a {
+    font-family: '微软雅黑';
+}
+
+#applicationMenu {
+    font-family: '微软雅黑';
+    font-size: 1.0em;
+}
+
+.applicationUserInfo {
+    font-family: '微软雅黑';
+    border: none;
+}
+
+.applicationTitle {
+    font-family: '微软雅黑 Light';
+    font-size: 2.5em;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#applicationBanner {
+    height: 75px;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+#footer {
+    font-family: "微软雅黑";
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;   /*脚部的高度*/
+    background-color: #153675;
+    clear:both;
+    opacity:0.80;  /*这是半透明效果 */
+    padding-right: 20px;
+}
+
+.page-header {
+    padding: 0px;
+}
+
+.wellcomePanel {
+    margin: auto;
+    margin-top: 5%;
+    width: 521px;
+    height: 375px;
+    background: url("../../../cn/edu/cup/login_bg_a.png") repeat-x;
+    padding-top: 10px;
+    border-radius: 6px;
+    border: 1px;
+}
+
+.wellcomePanel .title {
+    position: relative;
+    font-family: "微软雅黑";
+    font-size: 2.4em;
+    padding-top: 65px;
+    text-align: center;
+}
+
+.wellcomeForm {
+    font-family: "微软雅黑";
+    font-size: 1.0em;
+    margin-left: 140px;
+    margin-top: 35px;
+}
+
+.wellcomeForm li{
+    padding: 10px;
+}
+
+.wellcomeForm input {
+    font-family: "微软雅黑";
+    font-size: 1.0em;
+}
+
+body {
+    background : url("../../../cn/edu/cup/img_bg_haven.jpg");
+    background-position:center;
+    background-size: cover; /*这个是正确的*/
+}
+
+.column {
+    margin: 0px;
+    padding: 0px;
+}
+
+.list-group-item {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
