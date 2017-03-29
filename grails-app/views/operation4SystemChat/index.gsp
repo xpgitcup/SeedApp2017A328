@@ -31,9 +31,9 @@
                 </div>
 
                 <div class="easyui-panel">
-                    <div id="listSystemLogDiv" class="easyui-tree"></div>
+                    <div id="listSystemChatDiv" class="easyui-tree"></div>
 
-                    <div id="paginationSystemLogDiv" class="easyui-pagination"></div>
+                    <div id="paginationSystemChatDiv" class="easyui-pagination"></div>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="easyui-panel">
-                    <div id="showSystemLogDiv"></div>
+                    <div id="showSystemChatDiv"></div>
                 </div>
             </div>
         </div>
