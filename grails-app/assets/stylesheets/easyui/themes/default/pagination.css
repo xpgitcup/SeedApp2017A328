@@ -32,7 +32,7 @@
   border-style: solid;
 }
 .pagination-info {
-  display: none;  //李晓平加入2017.02.08
+  /*display: none;  //李晓平加入2017.02.08*/
   float: right;
   margin: 0 6px 0 0;
   padding: 0;

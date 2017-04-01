@@ -237,7 +237,7 @@ a.navbar-brand {
 
 @media (max-width: 1010px) {
     .event-logo {
-        height: 0;  //李晓平修改，原来是空的
+        height: 0  /*李晓平修改，原来是空的*/
     }
 
 }
