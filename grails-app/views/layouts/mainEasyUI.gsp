@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>
+        <g:layoutTitle default="Grails"/>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <asset:stylesheet src="application.css"/>
+
+    <!--引入easyui的相关内容-->
+    <asset:stylesheet src="easyui/themes/default/easyui.css"/>
+    <asset:stylesheet src="easyui/themes/icon.css"/>
+    <asset:stylesheet src="easyui/themes/color.css"/>
+    <!--asset:stylesheet src="easyui/themes/bootstrap/easyui.css"/-->
+    <!--引入树形结构显示组件-->
+    <asset:stylesheet src="bootstrap-treeview/bootstrap-treeview.min.css"/>
+    <!--引入jqpagination的样式-->
+    <!--asset:stylesheet src="jqpagination/jqpagination.css"/-->
+
+    <!--引入CUP的相关内容-->
+    <asset:stylesheet src="cn/edu/cup/cup.css"/>
+
+    <!--JS加载-->
+    <asset:javascript src="jquery-2.2.0.min.js"/>
+
+    <asset:javascript src="easyui/jquery.easyui.min.js"/>
+
+    <asset:javascript src="bootstrap.js"/>
+    <asset:javascript src="bootstrap-treeview/bootstrap-treeview.min.js"/>
+    <asset:javascript src="jquery/jquery.cookie.js"/>
+    <!--引入jqpagination-->
+    <!--asset:javascript src="jqpagination/jquery.jqpagination.min.js"/-->
+    <!--用户自定义的-->
+    <asset:javascript src="cn/edu/cup/common/common.js"/>
+
+    <g:layoutHead/>
+</head>
+
+<body>
+
+<!-- 定义主框架 -->
+<div id="mainFrame" class="easyui-layout" fit="true">
+    <!-- 标题部分 -->
+    <div data-options="region:'north'" style="height: 78px">
+        <!-- 这是左上角图标，来自于白色的圣杯的大图的缩小版  -->
+        <asset:image src="cn/edu/cup/${cn.edu.cup.system.SystemTitle.last()?.applicationLogo}"/>
+    </div>
+    <!-- 页脚 -->
+    <div data-options="region:'south'" style="width: 100%">
+        <ul class="nav">
+            <li>
+                当前用户：${session?.systemUser?.userName}[${session?.systemUser?.roleAttribute}]
+            </li>
+            <li>
+                在线:${session?.onlineCount}人，
+            </li>
+            <li>
+                ${session?.systemUserList}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="spinner" class="spinner" style="display:none;">
+    <g:message code="spinner.alt" default="Loading&hellip;"/>
+</div>
+
+<!--asset:javascript src="application.js"/-->
+
+</body>
+</html>

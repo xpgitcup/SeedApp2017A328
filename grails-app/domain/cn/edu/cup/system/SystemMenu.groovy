@@ -9,6 +9,7 @@ class SystemMenu {
     String menuDescription
     SystemMenu upMenuItem
     String  roleAttribute
+    String layout
     int menuOrder
 
     static hasMany = [menuItems: SystemMenu]
@@ -20,6 +21,7 @@ class SystemMenu {
         menuOrder()
         upMenuItem(nullable: true)
         roleAttribute(nullable: true)
+        layout(nullable: true)
     }
 
     static mapping = {

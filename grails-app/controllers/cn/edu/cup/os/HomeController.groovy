@@ -1,5 +1,6 @@
 package cn.edu.cup.os
 
+import cn.edu.cup.system.SystemTitle
 import cn.edu.cup.system.SystemUser
 
 class HomeController {
@@ -59,6 +60,11 @@ class HomeController {
             //在会话中登记用户
             registeUserInSession(systemUser)
             systemLogService.recordLog(session, request, params)
+            //设置应用程序的布局
+            def layout = SystemTitle.last().applicationLayout
+            if (layout) {
+                session.layout = layout
+            }
         }
         redirect(uri: "/")
     }

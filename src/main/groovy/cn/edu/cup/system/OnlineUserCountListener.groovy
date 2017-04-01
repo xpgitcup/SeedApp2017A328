@@ -14,6 +14,17 @@ class OnlineUserCountListener  implements HttpSessionListener{
     @Override
     void sessionCreated(HttpSessionEvent se) {
         System.out.println("创建session......");
+        //创建唯一的用户登记表
+        HttpSession s = se.getSession();
+        if (s != null) {
+            ServletContext ctx = s.getServletContext();
+            if (ctx != null) {
+                Map serviceMap = (Map) ctx.getAttribute("systemUserList");
+                if (!serviceMap) {
+                    ctx["systemUserList"] = new HashMap()
+                }
+            }
+        }
     }
 
     @Override

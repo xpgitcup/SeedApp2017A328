@@ -8,10 +8,10 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <asset:stylesheet src="application.css"/>
-
     <!--引入bootstrap的相关内容-->
-    <aseet:stylesheet src="bootstrap.css"/>
+    <asset:stylesheet src="bootstrap.css"/>
+
+    <asset:stylesheet src="application.css"/>
 
     <!--引入easyui的相关内容-->
     <asset:stylesheet src="easyui/themes/default/easyui.css"/>
