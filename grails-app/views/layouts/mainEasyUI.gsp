@@ -53,10 +53,29 @@
         <div class="applicationTitle">
             ${cn.edu.cup.system.SystemTitle.last()?.applicationTitle}
         </div>
+
+        <div class="applicationHeaderStatus">
+            <ul>
+            <!-- 显示当前用户 -->
+                <g:if test="${session.systemUser}">
+                    <li><a href="${createLink(uri: '/home/logout')}">退出</a></li>
+                </g:if>
+                <g:else>
+                    <li><a href="${createLink(uri: '/home/loginUI')}">去登录</li>
+                </g:else>
+            </ul>
+        </div>
     </div>
     <!-- 左边的菜单-->
     <div data-options="region:'west', split: true" style="width: 20%">
+        <div class="easyui-accordion" style="width: auto">
+            <g:each in="${session.systemMenuList}" var="menuItem" status="i">
+                <div title="${menuItem.menuContext}" data-options="iconCls:'icon-ok'">
 
+                </div>
+            </g:each>
+
+        </div>
     </div>
     <!-- 主显示区 -->
     <div data-options="region:'center'" class="mainContent">
@@ -70,13 +89,13 @@
         </div>
         <ul class="applicationFooter">
             <li>
-                当前用户：${session?.systemUser?.userName}[${session?.systemUser?.roleAttribute}]
-            </li>
-            <li>
-                在线:${session?.onlineCount}人，
-            </li>
-            <li>
                 ${session?.systemUserList}
+            </li>
+            <li>
+                在线:${session?.onlineCount}人:
+            </li>
+            <li>
+                当前用户：${session?.systemUser?.userName}[${session?.systemUser?.roleAttribute}]
             </li>
         </ul>
     </div>
