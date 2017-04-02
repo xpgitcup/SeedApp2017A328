@@ -61,7 +61,7 @@
                     <li><a href="${createLink(uri: '/home/logout')}">退出</a></li>
                 </g:if>
                 <g:else>
-                    <li><a href="${createLink(uri: '/home/loginUI')}">去登录</li>
+                    <li><a href="${createLink(uri: '/home/loginUI')}">去登录 < /li>
                 </g:else>
             </ul>
         </div>
