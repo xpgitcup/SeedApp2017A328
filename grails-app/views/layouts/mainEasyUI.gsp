@@ -21,7 +21,7 @@
     <!--asset:stylesheet src="jqpagination/jqpagination.css"/-->
 
     <!--引入CUP的相关内容-->
-    <asset:stylesheet src="cn/edu/cup/cup.css"/>
+    <asset:stylesheet src="cn/edu/cup/cupEasyUi.css"/>
 
     <!--JS加载-->
     <asset:javascript src="jquery-2.2.0.min.js"/>
@@ -45,12 +45,30 @@
 <div id="mainFrame" class="easyui-layout" fit="true">
     <!-- 标题部分 -->
     <div data-options="region:'north'" style="height: 78px">
-        <!-- 这是左上角图标，来自于白色的圣杯的大图的缩小版  -->
-        <asset:image src="cn/edu/cup/${cn.edu.cup.system.SystemTitle.last()?.applicationLogo}"/>
+        <div class="header-EasyUI">
+            <!-- 这是左上角图标，来自于白色的圣杯的大图的缩小版  -->
+            <asset:image src="cn/edu/cup/${cn.edu.cup.system.SystemTitle.last()?.applicationLogo}"/>
+        </div>
+
+        <div class="applicationTitle">
+            ${cn.edu.cup.system.SystemTitle.last()?.applicationTitle}
+        </div>
+    </div>
+    <!-- 左边的菜单-->
+    <div data-options="region:'west', split: true" style="width: 20%">
+
+    </div>
+    <!-- 主显示区 -->
+    <div data-options="region:'center'" class="mainContent">
+        <!-- 这里插入显示主体 -->
+        <g:layoutBody/>
     </div>
     <!-- 页脚 -->
     <div data-options="region:'south'" style="width: 100%">
-        <ul class="nav">
+        <div class="applicationFooterLeft">
+            <span>中国石油大学（北京），CopyRight 2017，Ver 1.0</span>
+        </div>
+        <ul class="applicationFooter">
             <li>
                 当前用户：${session?.systemUser?.userName}[${session?.systemUser?.roleAttribute}]
             </li>
