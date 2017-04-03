@@ -11,8 +11,8 @@ class BootStrap {
     def init = { servletContext ->
         environments {
             development {
-                def domains = grailsApplication.controllerClasses
-                initService.initSystemData(domains)
+                def controllers = grailsApplication.controllerClasses
+                initService.initSystemData(controllers)
                 initService.fillSamples()
                 configureForDevelopment(servletContext);
             }

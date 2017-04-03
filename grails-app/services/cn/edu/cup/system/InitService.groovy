@@ -60,7 +60,7 @@ class InitService {
     def initSystemMenuItems(domains) {
         if (SystemMenu.count() < 1) {
             def m0 = new SystemMenu(
-                    menuContext: "底层编辑",
+                    menuContext: "底层管理",
                     menuAction: "#",
                     menuDescription: "对系统的菜单结构进行底层维护",
                     upMenuItem: null,
@@ -69,6 +69,7 @@ class InitService {
             )
             m0.save(true)
             //----------------------------------------------------------------------------------------------------------
+            //创建正对各个域类控制器的菜单
             domains.each() { e ->
                 def m01 = new SystemMenu(
                         menuContext: "${e.name}",
@@ -80,6 +81,15 @@ class InitService {
                 )
                 m01.save(true)
             }
+            def m011 = new SystemMenu(
+                    menuContext: "系统状态",
+                    menuAction: "operation4SystemStatus",
+                    menuDescription: "显示当前的系统状态",
+                    upMenuItem: m0,
+                    roleAttribute: "底层管理",
+                    menuOrder: 0
+            )
+            m011.save(true)
             //----------------------------------------------------------------------------------------------------------
             def m1 = new SystemMenu(
                     menuContext: "系统维护",
