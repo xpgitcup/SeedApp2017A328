@@ -16,14 +16,17 @@ class Operation4SystemStatusController {
             def p = it.menuAction.indexOf('/')
             if (p > -1) {
                 def name = it.menuAction.substring(0, p)
+                println("${name}")
                 if (!(name in controllerList)) {
                     toDoList.add(name)
+                } else {
+                    println("-->${name}")
                 }
             }
         }
         model:[
                 noAction: noAction,
-                toDo: toDoList
+                toDoList: toDoList
         ]
     }
 }

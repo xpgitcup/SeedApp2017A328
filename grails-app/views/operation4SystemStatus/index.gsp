@@ -36,6 +36,7 @@
     <li><a href="#">Tag Libraries: ${grailsApplication.tagLibClasses.size()}</a></li>
     <li><a href="#">系统菜单: ${cn.edu.cup.system.SystemMenu.count()}</a></li>
     <li><a href="#">缺少动作的菜单: ${noAction}</a></li>
+    <li><a href="#">需要完成的菜单: ${toDoList?.size()}</a></li>
     <hr>
     <ul>
         <g:each in="${toDoList}" var="item" status="i">

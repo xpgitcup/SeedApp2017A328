@@ -35,6 +35,7 @@
     <!--asset:javascript src="jqpagination/jquery.jqpagination.min.js"/-->
     <!--用户自定义的-->
     <asset:javascript src="cn/edu/cup/common/common.js"/>
+    <asset:javascript src="cn/edu/cup/common/mainEasyUI.js"/>
 
     <g:layoutHead/>
 </head>
@@ -68,9 +69,9 @@
     </div>
     <!-- 左边的菜单-->
     <div data-options="region:'west', split: true" style="width: 20%">
-        <div class="easyui-accordion" style="width: auto">
+        <div id="mainSystemMenuDiv" class="easyui-accordion" data-options="animate: false" style="width: auto">
             <g:each in="${session.systemMenuList}" var="menuItem" status="i">
-                <div title="${menuItem.menuContext}" data-options="iconCls:'icon-ok'">
+                <div title="${menuItem.menuContext}" data-options="iconCls:'icon-ok'" style="overflow:auto">
                     <ul>
                         <g:each in="${session.subMenuItems[i]}" status="j" var="subMenuItem">
                             <li>
