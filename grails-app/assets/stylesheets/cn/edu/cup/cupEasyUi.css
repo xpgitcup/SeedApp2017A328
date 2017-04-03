@@ -17,6 +17,7 @@
 /*这是页眉，右侧，状态栏*/
 .applicationHeaderStatus {
     float: right;
+    padding-right: 10px;
 }
 
 /*这是程序的页脚*/

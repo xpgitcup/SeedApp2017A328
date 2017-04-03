@@ -20,6 +20,7 @@
             <meta name="layout" content="main"/>
         </g:else>
     </g:else>
+    <!-- end 实现可定制的布局 -->
     <!-- 设置当前域类的名字，以后的所有命名规则都基于这个名字 -->
     <g:set var="entityName" value="Home"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

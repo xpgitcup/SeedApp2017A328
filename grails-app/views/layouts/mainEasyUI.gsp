@@ -71,7 +71,15 @@
         <div class="easyui-accordion" style="width: auto">
             <g:each in="${session.systemMenuList}" var="menuItem" status="i">
                 <div title="${menuItem.menuContext}" data-options="iconCls:'icon-ok'">
-
+                    <ul>
+                        <g:each in="${session.subMenuItems[i]}" status="j" var="subMenuItem">
+                            <li>
+                                <a href="${createLink(uri: '/' + subMenuItem.menuAction)}">
+                                    ${subMenuItem.menuContext}
+                                </a>
+                            </li>
+                        </g:each>
+                    </ul>
                 </div>
             </g:each>
 
