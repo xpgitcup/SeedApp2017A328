@@ -23,9 +23,3 @@ $(function () {
 
 });
 
-//写在这里的好像没有用了。
-function selectAccordion(title, index) {
-    console.info("选择：" + title + "---" + index);
-    $.cookie("currentAccordion", title);
-}
-
