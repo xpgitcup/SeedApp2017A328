@@ -31,7 +31,7 @@ $(function () {
     //mainSystemMenuDiv.accordion('select', currentAccordion);
     currentAccordion = mainSystemMenuDiv.accordion('getSelected');
     console.info(currentAccordion.attr('title'));
-    if (currentAccordion != currentPanel) {
+    if (currentAccordion !== currentPanel) {
         mainSystemMenuDiv.accordion('select', currentPanel);
     }
 
