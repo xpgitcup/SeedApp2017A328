@@ -14,9 +14,9 @@ $(function () {
     mainSystemMenuDiv = $("#mainSystemMenuDiv");
 
     //读取当前的Panel
-    currentAccordion = readCookie("currentAccordion", 0);
+    //currentAccordion = readCookie("currentAccordion", "底层管理");
     currentPanel = readCookie("mainPanel", "底层管理");
-    console.info("上一次停留在：" + currentAccordion);
+    console.info("上一次停留在：" + currentPanel);
 
     mainSystemMenuDiv.accordion({
         onSelect: function (title, index) {
@@ -27,8 +27,12 @@ $(function () {
         }
     });
     //mainSystemMenuDiv.accordion('select', currentAccordion);
-    mainSystemMenuDiv.accordion('select', currentPanel);
-    
+    currentAccordion = mainSystemMenuDiv.accordion('getSelected');
+    console.info(currentAccordion[0].title);
+    if (currentAccordion != currentPanel) {
+        mainSystemMenuDiv.accordion('select', currentPanel);
+    }
+
     loadSystemMenuTrees();
 
 });
