@@ -17,26 +17,23 @@ $(function () {
     //currentAccordion = readCookie("currentAccordion", "底层管理");
     currentPanel = readCookie("mainPanel", "底层管理");
     console.info("上一次停留在：" + currentPanel);
+    mainPanel.panel('setTitle', "主功能区=>" + currentPanel);  //没有状态---没有状态
 
     mainSystemMenuDiv.accordion({
         onSelect: function (title, index) {
             console.info("选择：" + title + "---" + index);
-            mainPanel = $("#mainPanel").panel('setTitle', "主功能区=>" + title);
-            $.cookie('mainPanel', title, {path: '/'});
-            //$.cookie("currentAccordion", index, {path: '/'});
+            if (index>-1) {
+                mainPanel.panel('setTitle', "主功能区=>" + title);
+                $.cookie('mainPanel', title, {path: '/'});
+            }
         }
     });
     //mainSystemMenuDiv.accordion('select', currentAccordion);
     currentAccordion = mainSystemMenuDiv.accordion('getSelected');
-    console.info(currentAccordion[0].title);
+    console.info(currentAccordion.attr('title'));
     if (currentAccordion != currentPanel) {
         mainSystemMenuDiv.accordion('select', currentPanel);
     }
 
-    loadSystemMenuTrees();
-
 });
 
-function loadSystemMenuTrees() {
-    
-}
