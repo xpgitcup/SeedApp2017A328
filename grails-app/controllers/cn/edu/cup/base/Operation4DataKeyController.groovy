@@ -2,7 +2,7 @@ package cn.edu.cup.base
 
 import cn.edu.cup.dictionary.JsFrame
 import cn.edu.cup.dictionary.DataKey
-import cn.edu.cup.dictionary.DataKeyController
+
 import grails.converters.JSON
 import grails.transaction.Transactional
 
