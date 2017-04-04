@@ -83,7 +83,7 @@ class InitService {
             }
             def m011 = new SystemMenu(
                     menuContext: "系统状态",
-                    menuAction: "operation4SystemStatus",
+                    menuAction: "Operation4SystemStatus",
                     menuDescription: "显示当前的系统状态",
                     upMenuItem: m0,
                     roleAttribute: "底层管理",
@@ -103,7 +103,7 @@ class InitService {
             //----------------------------------------------------------------------------------------------------------
             def m11 = new SystemMenu(
                     menuContext: "属性维护",
-                    menuAction: "operation4SystemAttribute/index",
+                    menuAction: "Operation4SystemAttribute/index",
                     menuDescription: "对系统的用户属性进行用户友好的维护",
                     upMenuItem: m1,
                     menuOrder: 0
@@ -112,7 +112,7 @@ class InitService {
             //----------------------------------------------------------------------------------------------------------
             def m12 = new SystemMenu(
                     menuContext: "用户维护",
-                    menuAction: "operation4SystemUser/index",
+                    menuAction: "Operation4SystemUser/index",
                     menuDescription: "对系统的用户进行用户友好的维护",
                     upMenuItem: m1,
                     menuOrder: 0
@@ -121,7 +121,7 @@ class InitService {
             //----------------------------------------------------------------------------------------------------------
             def m13 = new SystemMenu(
                     menuContext: "菜单维护",
-                    menuAction: "operation4SystemMenu/index",
+                    menuAction: "Operation4SystemMenu/index",
                     menuDescription: "对系统的菜单用户进行用户友好的维护",
                     upMenuItem: m1,
                     menuOrder: 0
@@ -130,7 +130,7 @@ class InitService {
             //----------------------------------------------------------------------------------------------------------
             def m14 = new SystemMenu(
                     menuContext: "日志维护",
-                    menuAction: "operation4SystemLog/index",
+                    menuAction: "Operation4SystemLog/index",
                     menuDescription: "对系统的日志进行用户友好的维护",
                     upMenuItem: m1,
                     menuOrder: 0
@@ -149,7 +149,7 @@ class InitService {
             //----------------------------------------------------------------------------------------------------------
             def m21 = new SystemMenu(
                     menuContext: "社区沟通",
-                    menuAction: "operation4SystemChat/index",
+                    menuAction: "Operation4SystemChat/index",
                     menuDescription: "与系统中的用户对话",
                     upMenuItem: m2,
                     menuOrder: 0
@@ -168,7 +168,7 @@ class InitService {
             //----------------------------------------------------------------------------------------------------------
             def m31 = new SystemMenu(
                     menuContext: "数据字典",
-                    menuAction: "operation4DataKey/index",
+                    menuAction: "Operation4DataKey/index",
                     menuDescription: "数据字典维护",
                     upMenuItem: m3,
                     menuOrder: 0
@@ -177,7 +177,7 @@ class InitService {
             //----------------------------------------------------------------------------------------------------------
             def m32 = new SystemMenu(
                     menuContext: "数据维护",
-                    menuAction: "operation4DataItem/index",
+                    menuAction: "Operation4DataItem/index",
                     menuDescription: "数据维护",
                     upMenuItem: m3,
                     menuOrder: 0
@@ -186,7 +186,7 @@ class InitService {
             //----------------------------------------------------------------------------------------------------------
             def m33 = new SystemMenu(
                     menuContext: "单位维护",
-                    menuAction: "operation4Physical/index",
+                    menuAction: "Operation4Physical/index",
                     menuDescription: "物理单位维护",
                     upMenuItem: m3,
                     menuOrder: 0
