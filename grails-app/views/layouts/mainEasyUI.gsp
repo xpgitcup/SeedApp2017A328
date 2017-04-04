@@ -87,7 +87,7 @@
         </div>
     </div>
     <!-- 主显示区 -->
-    <div data-options="region:'center'" class="mainContent">
+    <div id="mainPanel" data-options="region:'center'" class="mainContent" title="????">
         <!-- 这里插入显示主体 -->
         <g:layoutBody/>
     </div>
