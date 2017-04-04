@@ -74,6 +74,24 @@ class Operation4SystemMenuController extends SystemMenuController{
     /*
     * 获取json格式的树形结构数据
     * */
+    def getSystemMenuTree(SystemMenu systemMenu) {
+        def data = systemMenu.menuItems
+        println("查询---菜单${data}")
+        params.context = "hrefContext"
+        params.subItems = "menuItems"
+        params.attributes = "id"    //
+        params.useMethod = true
+        def result = treeViewService.generateNodesString(data, params, JsFrame.EasyUI)
+        if (request.xhr) {
+            render result as JSON
+        } else {
+            result
+        }
+    }
+
+    /*
+    * 获取json格式的树形结构数据
+    * */
     def getTreeSystemMenu() {
         def data = SystemMenu.findAllByUpMenuItemIsNull(params)     //这是必须调整的
         params.context = "menuContext"

@@ -28,6 +28,11 @@ $(function () {
     });
     //mainSystemMenuDiv.accordion('select', currentAccordion);
     mainSystemMenuDiv.accordion('select', currentPanel);
+    
+    loadSystemMenuTrees();
 
 });
 
+function loadSystemMenuTrees() {
+    
+}

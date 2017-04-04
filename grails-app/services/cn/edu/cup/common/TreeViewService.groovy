@@ -11,7 +11,6 @@ class TreeViewService extends GenericService {
     * 创建对象列表的树形显示字符串，基于EasyUI
     * 这是调用的入口
     * */
-
     def createTreeViewString(objects, params, JsFrame jsFrame) {
 
         def result = []
@@ -32,7 +31,6 @@ class TreeViewService extends GenericService {
     * 2016.12.17
     * 生成节点的Map
     * */
-
     def generateNodesString(objects, params, JsFrame jsFrame) {
         def result = []
 
@@ -49,7 +47,7 @@ class TreeViewService extends GenericService {
                 tempText = e.metaClass.getProperty(e, "${itemText}")
             } else {
                 tempText = e.metaClass.invokeMethod(e, "${itemText}")
-                //println "使用方法....${tempText}"
+                println "使用方法....${tempText}"
             }
             //emap.put("nodeId", e.id)  //这个没有用，系统会自己定义节点编号
             emap.put("text", tempText)

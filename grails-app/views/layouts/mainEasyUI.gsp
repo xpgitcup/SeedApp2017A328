@@ -72,15 +72,7 @@
         <div id="mainSystemMenuDiv" class="easyui-accordion" data-options="animate: false" style="width: auto">
             <g:each in="${session.systemMenuList}" var="menuItem" status="i">
                 <div title="${menuItem.menuContext}" data-options="iconCls:'icon-ok'" style="overflow:auto">
-                    <ul>
-                        <g:each in="${session.subMenuItems[i]}" status="j" var="subMenuItem">
-                            <li>
-                                <a href="${createLink(uri: '/' + subMenuItem.menuAction)}">
-                                    ${subMenuItem.menuContext}
-                                </a>
-                            </li>
-                        </g:each>
-                    </ul>
+                    <ul id="systemMenuTree${menuItem.id}" class="easyui-tree" url="/operation4SystemMenu/getSystemMenuTree/${menuItem.id}"></ul>
                 </div>
             </g:each>
 
