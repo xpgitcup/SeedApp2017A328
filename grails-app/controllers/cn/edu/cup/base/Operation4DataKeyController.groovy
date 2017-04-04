@@ -1,5 +1,6 @@
 package cn.edu.cup.base
 
+import cn.edu.cup.dictionary.DataKeyController
 import cn.edu.cup.dictionary.JsFrame
 import cn.edu.cup.dictionary.DataKey
 
@@ -15,7 +16,7 @@ class Operation4DataKeyController extends DataKeyController{
     * 创建对象
     * */
     def createDataKey(DataKey dataKey) {
-        def newDataKey = new DataKey(upMenuItem: dataKey)
+        def newDataKey = new DataKey(upKey: dataKey)
         if (request.xhr) {
             render(template: 'editDataKey', model: [dataKey: newDataKey])
         } else {
@@ -48,7 +49,7 @@ class Operation4DataKeyController extends DataKeyController{
     * 统计根属性
     * */
     def countDataKey() {
-        def count = DataKey.countByUpMenuItemIsNull()    //这是必须调整的
+        def count = DataKey.countByUpKeyIsNull()    //这是必须调整的
         println("统计结果：${count}")
         def result = [count: count]
         if (request.xhr) {
@@ -75,10 +76,10 @@ class Operation4DataKeyController extends DataKeyController{
     * 获取json格式的树形结构数据
     * */
     def getDataKeyTree(DataKey dataKey) {
-        def data = dataKey.menuItems
+        def data = dataKey.subKeys      //必须调整的
         println("查询---菜单${data}")
-        params.context = "hrefContext"
-        params.subItems = "menuItems"
+        params.context = "keyContext"
+        params.subItems = "subKeys"
         params.attributes = "id"    //
         params.useMethod = true
         def result = treeViewService.generateNodesString(data, params, JsFrame.EasyUI)
@@ -93,9 +94,9 @@ class Operation4DataKeyController extends DataKeyController{
     * 获取json格式的树形结构数据
     * */
     def getTreeDataKey() {
-        def data = DataKey.findAllByUpMenuItemIsNull(params)     //这是必须调整的
-        params.context = "menuContext"
-        params.subItems = "menuItems"
+        def data = DataKey.findAllByUpKeyIsNull(params)     //这是必须调整的
+        params.context = "keyContext"
+        params.subItems = "subKeys"
         params.attributes = "id"    //
         def result = treeViewService.generateNodesString(data, params, JsFrame.EasyUI)
         if (request.xhr) {

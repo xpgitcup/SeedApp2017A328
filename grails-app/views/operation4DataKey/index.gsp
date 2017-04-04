@@ -19,7 +19,7 @@
     <g:set var="entityName" value="DataKey"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>${entityName}维护</title>
-    <asset:javascript src="cn/edu/cup/baes/${entityName}.js"/>
+    <asset:javascript src="cn/edu/cup/base/${entityName}.js"/>
 </head>
 
 <body>
